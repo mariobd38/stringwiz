@@ -1,0 +1,101 @@
+/*colors: #58bcdb, #4296af*/
+.img-fluid-custom {
+    margin:auto;
+    width: 230px;
+    padding:0;
+}
+.navbar {
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 991px) {
+    .navbar-brand {
+        text-align: center;
+        margin: auto;
+        display: inline-block;
+    }
+    .sidebar {
+        backdrop-filter: blur(40px);
+    }
+}
+
+.nav-link, .subheading {
+    font-size: 0.85em;
+}
+@media (width < 1200px) {
+    .dropdown-menu {
+        width: 60%;
+    }
+}
+.offcanvas-header {
+    color: #4296af;
+    border-bottom-color: #4296af;
+}
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
+.nav-link:hover {
+    color: black;
+    font-weight: bold;
+}
+.register {
+    background-color: black;
+    border: 2px solid black;
+}
+.register:hover {
+    background-color: #4296af;
+}
+.text-reset {
+    color: #4296af;
+    text-decoration: none;
+}
+.text-reset:hover, .footer-sec{
+    color: #4296af !important;
+    text-decoration: none;
+}
+.login {
+    color: #58bcdb;
+    border: none;
+}
+.login:hover {
+    color: #551de2;
+}
+/*.top-text {*/
+/*    font-family: 'Lato', serif;*/
+/*    font-weight: 700;*/
+/*}*/
+.left-header-block {
+    width: 350px;
+}
+.left-header-text {
+    font-size: 60px;
+    font-family: 'Ubuntu', serif;
+    font-weight: 700;
+    color: white;
+}
+.description {
+    font-family: 'Montserrat', serif;
+    font-size: 1.2em;
+    color: white;
+}
+.how_it_works {
+    border: 2px solid black;
+    background-color: white;
+}
+.how_it_works:hover {
+   background-color: #58bcdb;
+}
+.header {
+    background-color: rgb(34, 54, 84);
+}
