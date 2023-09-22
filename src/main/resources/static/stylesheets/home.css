@@ -71,10 +71,6 @@ ul li ul li {
 .login:hover {
     color: #551de2;
 }
-/*.top-text {*/
-/*    font-family: 'Lato', serif;*/
-/*    font-weight: 700;*/
-/*}*/
 .left-header-block {
     width: 350px;
 }
@@ -97,5 +93,5 @@ ul li ul li {
    background-color: #58bcdb;
 }
 .header {
-    background-color: rgb(34, 54, 84);
+    background-color: #223654;
 }

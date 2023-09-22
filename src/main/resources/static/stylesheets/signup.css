@@ -1,0 +1,53 @@
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+.description {
+    color: #4a4a4a;
+    font-size: 0.97em;
+}
+.left-header-text {
+    font-size: 50px;
+    font-family: 'Ubuntu', serif;
+    font-weight: 700;
+    color: black;
+}
+.illustration-div {
+    height: 100vh;
+    background-color: #551de2;
+    padding: 0 30px;
+}
+@media (max-width: 991px) {
+    .illustration-div {
+        width: 100%;
+        height: 70vh;
+    }
+}
+.input-group,.register {
+    margin: auto;
+    width: 25em;
+}
+.form-control::placeholder {
+    font-family: 'Lato', serif;
+    color: #9a9a9a;
+}
+.form-control {
+    border-left: none;
+}
+.input-group-text {
+    background-color: white;
+}
+a {
+    text-decoration: none;
+}
+.input-label {
+    margin:auto;
+    width: 25em;
+    text-align:start;
+    padding-left: 3px;
+    font-family: 'Lato', serif;
+    color: #5a5a5a;
+}
