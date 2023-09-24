@@ -95,3 +95,13 @@ ul li ul li {
 .header {
     background-color: #223654;
 }
+a {
+    text-decoration: none;
+}
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}

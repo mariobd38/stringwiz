@@ -1,0 +1,37 @@
+.left-header-text {
+    font-size: 43px;
+    font-family: 'Ubuntu', serif;
+    font-weight: 700;
+    color: white;
+}
+body {
+    background-color:#223654;
+}
+.description {
+    font-size: 1em;
+}
+.input-group {
+    width: 25em;
+    margin: auto;
+}
+.input-group-text {
+    background-color: white;
+}
+.login-btn {
+    width: 25em;
+    background-color: #4296af;
+    color: white;
+}
+.login-btn:hover {
+    background-color: #551de2;
+    color: white;
+}
+.sign-up {
+    color: #58bcdb;
+}
+.sign-up:hover {
+    color: #4296af;
+}
+.form-control {
+    border-left: none;
+}
