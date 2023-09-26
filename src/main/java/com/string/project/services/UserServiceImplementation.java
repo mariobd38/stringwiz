@@ -33,8 +33,10 @@ public class UserServiceImplementation implements UserService {
                     userRegistrationDto.getPassword());
         user.setPassword(passwordEncoder.encode(userRegistrationDto.getPassword()));
 
-        Role role = roleRepository.findByName("ROLE_ADMIN");
-        if (role == null) role = checkRoleExists();
+        String domain = getEmailDomain(user.getEmail());
+        String roleName = domain.equals("stringwiz") ? "ROLE_ADMIN" : "ROLE_IND_USER";
+        Role role = roleRepository.findByName(roleName);
+        if (role == null) role = checkRoleExists(roleName);
         user.setRoles(List.of(role));
         userRepository.save(user);
     }
@@ -60,9 +62,20 @@ public class UserServiceImplementation implements UserService {
         return userRegistrationDto;
     }
 
-    private Role checkRoleExists() {
+//    private Role createRole(String email) {
+//        Role role = new Role();
+//        String domain = someEmail.substring(someEmail.indexOf("@") + 1);
+//        if(email)
+//        role.setName("ROLE_IND_USER");
+//        return roleRepository.save(role)
+//    }
+    private String getEmailDomain(String email) {
+        return email.substring(email.indexOf("@") + 1,email.indexOf("."));
+    }
+
+    private Role checkRoleExists(String roleName) {
         Role role = new Role();
-        role.setName("ROLE_ADMIN");
+        role.setName(roleName);
         return roleRepository.save(role);
     }
 

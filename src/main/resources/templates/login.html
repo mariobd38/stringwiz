@@ -27,7 +27,7 @@
 <!--            <form method="post" role="form" th:action="@{/login}">-->
 
                 <div class="sign-in-header" >
-                    <h1 class="text-center left-header-text">Login to your <a href="/" th:ref="${/}"><span style="color: #58bcdb; font-family: 'Baron Neue','serif'">STRING</span><span style="color: #4296af; font-family: 'Baron Neue','serif'">WIZ</span></a> account</h1>
+                    <h1 class="text-center left-header-text">Login to your <a href="/" th:href="@{/}"><span style="color: #58bcdb; font-family: 'Baron Neue','serif'">STRING</span><span style="color: #4296af; font-family: 'Baron Neue','serif'">WIZ</span></a> account</h1>
                     <p class="text-center description">Please enter your personal/company email address</p>
 
                     <form method="post" role="form" th:action="@{/login}">
@@ -50,7 +50,7 @@
                             <input type="password" id="password" class="form-control" placeholder="Enter password" aria-label="password" aria-describedby="password-addon" name="password">
                         </div>
 
-                        <button class="btn login-btn">Continue</button>
+                        <button class="btn login-btn" th:href="@{/login}">Continue</button>
                     </form>
 
                 </div>

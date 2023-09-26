@@ -21,7 +21,7 @@
 <!--                <img class="logo_icon" src="/images/stringwiz_icon.png" alt="Stringwiz">-->
 <!--            </div>-->
             <div class="sign-up-header pt-5" >
-                <h1 class="text-center left-header-text">Welcome to <a href="/" th:ref="${/}"><span style="color: #58bcdb; font-family: 'Baron Neue','serif'">STRING</span><span style="color: #4296af; font-family: 'Baron Neue','serif'">WIZ</span></a></h1>
+                <h1 class="text-center left-header-text">Welcome to <a href="/" th:href="@{/}"><span style="color: #58bcdb; font-family: 'Baron Neue','serif'">STRING</span><span style="color: #4296af; font-family: 'Baron Neue','serif'">WIZ</span></a></h1>
                 <h4 class="text-center description">Get started - it's free. No credit card needed.</h4>
             </div>
             <div class="text-center pt-4 pb-3" >
@@ -82,7 +82,7 @@
 
 
                 <div class="pt-5">
-                    <p class="input-label text-center">Already a member? <a href="/login" th:ref="@{/login}" class="login">Log In</a></p>
+                    <p class="input-label text-center">Already a member? <a href="/login" th:href="@{/login}" class="login">Log In</a></p>
                 </div>
             </div>
         </div>

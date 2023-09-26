@@ -31,18 +31,21 @@ public class SpringSecurity {
                             .requestMatchers("/").permitAll()
                             .requestMatchers("/images/**").permitAll()
                             .requestMatchers("/stylesheets/**").permitAll()
+                            .requestMatchers("/login").permitAll()
                             .requestMatchers("/users").hasRole("ADMIN")
+                            .requestMatchers("/success").fullyAuthenticated()
             ).formLogin(
                     form -> form
                             .loginPage("/login")
                             .loginProcessingUrl("/login")
-                            .defaultSuccessUrl("/users")
-                            .permitAll()
-            ).logout(
-                    logout -> logout
-                            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                            .defaultSuccessUrl("/success")
                             .permitAll()
             );
+//                .logout(
+//                    logout -> logout
+//                            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+//                            .permitAll()
+//            );
         return http.build();
     }
 
