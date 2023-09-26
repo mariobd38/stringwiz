@@ -25,10 +25,8 @@
                 <h4 class="text-center description">Get started - it's free. No credit card needed.</h4>
             </div>
             <div class="text-center pt-4 pb-3" >
-                <div th:if="${param.failure}">
-                    <p class="description" style="color: #e31033">Error: Passwords must match </p>
                 </div>
-                <form th:action="@{/signup}" method="post" th:object="${user}">
+                <form th:action="@{/signup/save}" method="post" th:object="${user}" role="form">
                     <div class="input-label">
                         <label for="full-name" class="text-start">Full Name</label>
                     </div>
@@ -51,6 +49,7 @@
                             </svg>
                         </span>
                         <input type="email" id="email" class="form-control" placeholder="name@site.com" aria-label="email" aria-describedby="email-addon" th:field="*{email}" required autofocus="autofocus">
+                        <p th:errors="*{email}" class="text-danger description pt-3" th:if="${#fields.hasErrors('email')}"></p>
                     </div>
 
                     <div class="input-label">
@@ -75,6 +74,7 @@
                             </svg>
                         </span>
                         <input type="password" id="password-confirm" class="form-control" placeholder="Passwords must match" aria-label="password" aria-describedby="password-confirm-addon" th:field="*{confirmPassword}" required minlength="8">
+                        <p th:errors="*{password}" class="text-danger description pt-3" th:if="${#fields.hasErrors('password')}"></p>
                     </div>
 
                     <button class="btn register text-white text-center" type="submit">Continue</button>
@@ -82,7 +82,7 @@
 
 
                 <div class="pt-5">
-                    <p class="input-label text-center">Already a member? <a href="/login" th:ref="@{/login}" class="login">Log in</a></p>
+                    <p class="input-label text-center">Already a member? <a href="/login" th:ref="@{/login}" class="login">Log In</a></p>
                 </div>
             </div>
         </div>

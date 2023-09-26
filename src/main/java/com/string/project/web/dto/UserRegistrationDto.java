@@ -1,11 +1,11 @@
 package com.string.project.web.dto;
 
-import lombok.AccessLevel;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Data
 @NoArgsConstructor
@@ -13,10 +13,16 @@ import lombok.Setter;
 @Getter
 public class UserRegistrationDto {
     private String fullName;
+    @NotEmpty
     private String firstName;
+    @NotEmpty
     private String lastName;
+    @NotEmpty(message = "Email should not be empty")
+    @Email
     private String email;
+    @NotEmpty(message = "Password should not be empty")
     private String password;
+    @NotEmpty(message = "Password should not be empty")
     private String confirmPassword;
 
     public void setFullName(String fullName) {
